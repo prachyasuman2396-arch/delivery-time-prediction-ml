@@ -89,7 +89,7 @@ The model effectively captures both linear relationships and engineered interact
 
 ---
 
-## ⚙️ API Deployment
+##  API Deployment
 
 The trained model is deployed using FastAPI and hosted on Render.
 
@@ -103,7 +103,7 @@ The trained model is deployed using FastAPI and hosted on Render.
 
 ---
 
-## 💻 Frontend (Streamlit)
+##  Frontend (Streamlit)
 
 An interactive frontend is built using Streamlit for real-time predictions.
 
@@ -116,7 +116,7 @@ An interactive frontend is built using Streamlit for real-time predictions.
 
 ---
 
-## 🔄 End-to-End Flow
+## End-to-End Flow
 
 User Input (Streamlit)  
 → API Request (FastAPI)  
@@ -129,4 +129,70 @@ User Input (Streamlit)
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
+
+├── artifacts/
+│ └── model.pkl
+├── data/
+│ └── raw/
+├── src/
+│ ├── features/
+│ │ └── build_features.py
+│ ├── pipeline/
+│ │ └── training_pipeline.py
+├── train.py
+├── app/
+│ └── main.py
+├── streamlit_app.py
+├── requirements.txt
+
+
+---
+
+##  Key Highlights
+
+- End-to-end ML system (training → deployment → UI)
+- Custom feature engineering (domain-aware)
+- Production-grade pipeline using ColumnTransformer
+- REST API using FastAPI
+- Cloud deployment on Render
+- Interactive frontend using Streamlit
+
+---
+
+##  Design Decisions
+
+### Why use a pipeline?
+Ensures consistent transformations across training and inference while preventing data leakage.
+
+### Why feature engineering?
+Captures domain-specific relationships and improves model performance.
+
+### Why Linear Regression?
+- Interpretable baseline
+- Fast inference
+- Suitable for structured tabular data
+
+---
+
+##  Future Improvements
+
+- Upgrade model to XGBoost / LightGBM
+- Add model monitoring and logging (MLflow)
+- Implement drift detection
+- Dockerize the application
+- Add CI/CD pipeline for automated deployment
+
+---
+
+##  Author
+
+Prachya Das  
+B.Tech CSE (AI & ML)  
+Focused on Machine Learning Systems, Backend APIs, and Production AI
+
+---
+
+## Final Note
+
+This project is not just a model — it is a **complete ML system**, designed with scalability, modularity, and real-world deployment in mind.
