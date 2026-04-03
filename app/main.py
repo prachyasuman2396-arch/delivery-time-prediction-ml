@@ -6,9 +6,6 @@ from app.schema import DeliveryInput
 
 app = FastAPI()
 
-# ---------------------------
-# Load Model
-# ---------------------------
 model = joblib.load("artifacts/model.pkl")
 
 
